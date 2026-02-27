@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VitaRevive — Feel Like You Again</title>
+<title>VitaRevive — Research-Grade Peptide Compounds</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -14,8 +14,10 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:500;line-height:1.2
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
+/* RUO BANNER */
+.ruo-banner{background:var(--forest);color:var(--cream);text-align:center;padding:12px 24px;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;position:fixed;top:0;left:0;right:0;z-index:110}
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,246,240,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(168,181,160,.15);transition:box-shadow .3s}
+nav{position:fixed;top:40px;left:0;right:0;z-index:100;background:rgba(250,246,240,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(168,181,160,.15);transition:box-shadow .3s}
 nav.scrolled{box-shadow:0 2px 20px rgba(45,59,45,.08)}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:600;letter-spacing:.02em;color:var(--forest)}
@@ -25,16 +27,17 @@ nav.scrolled{box-shadow:0 2px 20px rgba(45,59,45,.08)}
 .nav-links a:hover{color:var(--terra)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{display:block;width:24px;height:2px;background:var(--forest);transition:all .3s}
-.mobile-menu{display:none;position:fixed;inset:0;top:72px;background:var(--cream);flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:99}
+.mobile-menu{display:none;position:fixed;inset:0;top:112px;background:var(--cream);flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:99}
 .mobile-menu.open{display:flex}
 .mobile-menu a{font-family:'Playfair Display',serif;font-size:1.5rem}
 /* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;background:var(--cream);position:relative;overflow:hidden}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:160px 24px 80px;background:var(--cream);position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-20%;right:-10%;width:500px;height:500px;border-radius:50%;background:var(--euca);opacity:.3;filter:blur(100px)}
 .hero::after{content:'';position:absolute;bottom:-10%;left:-5%;width:400px;height:400px;border-radius:50%;background:var(--blush);opacity:.25;filter:blur(80px)}
 .hero-content{position:relative;z-index:1;max-width:720px}
 .hero h1{font-size:clamp(2.5rem,6vw,4.5rem);color:var(--forest);margin-bottom:24px;font-weight:400;font-style:italic}
 .hero p{font-size:clamp(1rem,2vw,1.2rem);color:var(--forest);opacity:.75;max-width:520px;margin:0 auto 40px;font-weight:300}
+.hero .ruo-tag{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);border:1.5px solid var(--terra);padding:8px 20px;margin-bottom:24px}
 .btn{display:inline-block;padding:16px 40px;font-family:'DM Sans',sans-serif;font-size:.875rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:none;cursor:pointer;transition:all .35s ease}
 .btn-primary{background:var(--forest);color:var(--cream);border-radius:0}
 .btn-primary:hover{background:var(--terra)}
@@ -59,27 +62,9 @@ nav.scrolled{box-shadow:0 2px 20px rgba(45,59,45,.08)}
 .product-img svg{position:relative;z-index:1;width:48px;height:48px;opacity:.3}
 .product-info{padding:28px 24px}
 .product-info h3{font-size:1.15rem;margin-bottom:6px;font-weight:500}
-.product-info .product-cat{font-size:.8rem;color:var(--sage);font-weight:500;letter-spacing:.04em;text-transform:uppercase;margin-bottom:20px}
+.product-info .product-cat{font-size:.8rem;color:var(--sage);font-weight:500;letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px}
+.product-info .product-ruo{font-size:.7rem;color:var(--terra);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:20px}
 .product-info .btn-outline{padding:12px 28px;font-size:.75rem;width:100%;text-align:center}
-/* HOW IT WORKS */
-.how{padding:120px 24px;background:var(--white)}
-.how-header{text-align:center;margin-bottom:72px}
-.how-header h2{font-size:clamp(1.8rem,4vw,2.8rem);color:var(--forest)}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;max-width:960px;margin:0 auto;text-align:center}
-.step-num{width:64px;height:64px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold);margin:0 auto 24px}
-.step h3{font-size:1.25rem;margin-bottom:12px}
-.step p{font-size:.95rem;opacity:.65;font-weight:300;max-width:280px;margin:0 auto}
-.step-arrow{display:flex;align-items:center;justify-content:center;color:var(--sage);font-size:1.5rem}
-/* TESTIMONIALS */
-.testimonials{padding:120px 24px;background:var(--euca)}
-.testimonials-header{text-align:center;margin-bottom:64px}
-.testimonials-header h2{font-size:clamp(1.8rem,4vw,2.8rem);color:var(--forest)}
-.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1080px;margin:0 auto}
-.testimonial-card{background:var(--white);padding:40px 32px;position:relative}
-.testimonial-card .quote{font-family:'Playfair Display',serif;font-size:3rem;color:var(--gold);line-height:1;margin-bottom:16px}
-.testimonial-card p{font-size:.95rem;opacity:.7;font-style:italic;margin-bottom:24px;font-weight:300;line-height:1.8}
-.testimonial-card .author{font-weight:600;font-size:.85rem;letter-spacing:.04em}
-.testimonial-card .author span{display:block;font-weight:400;opacity:.5;margin-top:2px}
 /* FAQ */
 .faq{padding:120px 24px;background:var(--white)}
 .faq-header{text-align:center;margin-bottom:64px}
@@ -116,7 +101,7 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 .social-icons a:hover{border-color:var(--gold);color:var(--gold)}
 .footer-bottom{border-top:1px solid rgba(250,246,240,.1);padding-top:24px;text-align:center}
 .footer-bottom p{font-size:.75rem;opacity:.4;font-weight:300;line-height:1.8}
-.disclaimer{max-width:700px;margin:0 auto 8px;font-size:.7rem!important;opacity:.35!important;font-style:italic}
+.footer-disclaimer{max-width:800px;margin:0 auto 16px;padding:20px 24px;border:1px solid rgba(250,246,240,.15);font-size:.8rem!important;opacity:.7!important;font-weight:400;line-height:1.9;text-align:center}
 /* ANIMATIONS */
 .fade-in{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
@@ -129,8 +114,6 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 .nav-links{display:none}
 .hamburger{display:flex}
 .products-grid{grid-template-columns:1fr 1fr;gap:20px}
-.steps{grid-template-columns:1fr;gap:40px}
-.testimonials-grid{grid-template-columns:1fr}
 .footer-top{grid-template-columns:1fr}
 .newsletter-form{flex-direction:column}
 .newsletter-form input{border-right:1.5px solid var(--sage);border-bottom:none}
@@ -142,16 +125,18 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 </head>
 <body>
 
+<!-- RUO BANNER -->
+<div class="ruo-banner">For Research Use Only — Not for Human Consumption</div>
+
 <!-- NAV -->
 <nav id="navbar">
 <div class="nav-inner">
 <a href="#" class="logo">Vita<span>Revive</span></a>
 <div class="nav-links">
 <a href="#about">About</a>
-<a href="#products">Products</a>
-<a href="#how">How It Works</a>
+<a href="#products">Catalog</a>
 <a href="#faq">FAQ</a>
-<a href="#newsletter">Join Us</a>
+<a href="#newsletter">Updates</a>
 </div>
 <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
 <span></span><span></span><span></span>
@@ -160,27 +145,27 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 </nav>
 <div class="mobile-menu">
 <a href="#about" onclick="this.parentElement.classList.remove('open')">About</a>
-<a href="#products" onclick="this.parentElement.classList.remove('open')">Products</a>
-<a href="#how" onclick="this.parentElement.classList.remove('open')">How It Works</a>
+<a href="#products" onclick="this.parentElement.classList.remove('open')">Catalog</a>
 <a href="#faq" onclick="this.parentElement.classList.remove('open')">FAQ</a>
-<a href="#newsletter" onclick="this.parentElement.classList.remove('open')">Join Us</a>
+<a href="#newsletter" onclick="this.parentElement.classList.remove('open')">Updates</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
 <div class="hero-content">
-<h1>Feel like you again.</h1>
-<p>Rediscover your vitality with science-backed peptide wellness formulations designed for the modern woman. Because you deserve to feel extraordinary — every single day.</p>
-<a href="#products" class="btn btn-primary">Explore Our Collection</a>
+<div class="ruo-tag">For Research Use Only</div>
+<h1>Precision peptides for modern research.</h1>
+<p>High-purity, rigorously tested peptide compounds manufactured to exacting standards. Trusted by researchers and laboratories worldwide.</p>
+<a href="#products" class="btn btn-primary">View Full Catalog</a>
 </div>
 </section>
 
 <!-- ABOUT -->
 <section class="about" id="about">
 <div class="about-inner fade-in">
-<p class="section-label">Our Mission</p>
-<h2>Wellness, Reimagined</h2>
-<p>VitaRevive was born from a simple truth: women deserve better. Better science, better ingredients, better results. We combine cutting-edge peptide research with nature-inspired formulations to help you reclaim the energy, confidence, and radiance that's always been yours.</p>
+<p class="section-label">Our Standard</p>
+<h2>Purity. Precision. Consistency.</h2>
+<p>VitaRevive is dedicated to providing the research community with peptide compounds of the highest purity and quality. Every batch is synthesized under strict protocols and verified through third-party analytical testing, including HPLC and mass spectrometry, to ensure consistent identity, potency, and composition.</p>
 <div class="divider"></div>
 </div>
 </section>
@@ -189,41 +174,41 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 <section class="products" id="products">
 <div class="container">
 <div class="products-header fade-in">
-<p class="section-label">The Collection</p>
-<h2>Your Wellness, Your Way</h2>
+<p class="section-label">Product Catalog</p>
+<h2>Research Peptide Compounds</h2>
 </div>
 <div class="products-grid">
 <div class="product-card fade-in">
 <div class="product-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="8"/></svg></div>
-<div class="product-info"><h3>VitaRevive Sculpt</h3><p class="product-cat">Weight Management</p><a href="#" class="btn btn-outline">Learn More</a></div>
+<div class="product-info"><h3>VitaRevive Sculpt</h3><p class="product-cat">Peptide Compound</p><p class="product-ruo">For Research Use Only</p><a href="#" class="btn btn-outline">View Details</a></div>
 </div>
 <div class="product-card fade-in">
 <div class="product-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="8"/></svg></div>
-<div class="product-info"><h3>VitaRevive Sculpt Pro</h3><p class="product-cat">Advanced Weight Management</p><a href="#" class="btn btn-outline">Learn More</a></div>
+<div class="product-info"><h3>VitaRevive Sculpt Pro</h3><p class="product-cat">Advanced Peptide Compound</p><p class="product-ruo">For Research Use Only</p><a href="#" class="btn btn-outline">View Details</a></div>
 </div>
 <div class="product-card fade-in">
 <div class="product-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="8"/></svg></div>
-<div class="product-info"><h3>VitaRevive Ignite</h3><p class="product-cat">Metabolic Support</p><a href="#" class="btn btn-outline">Learn More</a></div>
+<div class="product-info"><h3>VitaRevive Ignite</h3><p class="product-cat">Research Peptide Blend</p><p class="product-ruo">For Research Use Only</p><a href="#" class="btn btn-outline">View Details</a></div>
 </div>
 <div class="product-card fade-in">
 <div class="product-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="8"/></svg></div>
-<div class="product-info"><h3>VitaRevive Restore</h3><p class="product-cat">Recovery &amp; Repair</p><a href="#" class="btn btn-outline">Learn More</a></div>
+<div class="product-info"><h3>VitaRevive Restore</h3><p class="product-cat">Peptide Compound</p><p class="product-ruo">For Research Use Only</p><a href="#" class="btn btn-outline">View Details</a></div>
 </div>
 <div class="product-card fade-in">
 <div class="product-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="8"/></svg></div>
-<div class="product-info"><h3>VitaRevive Recharge</h3><p class="product-cat">Cellular Energy</p><a href="#" class="btn btn-outline">Learn More</a></div>
+<div class="product-info"><h3>VitaRevive Recharge</h3><p class="product-cat">Research Peptide Blend</p><p class="product-ruo">For Research Use Only</p><a href="#" class="btn btn-outline">View Details</a></div>
 </div>
 <div class="product-card fade-in">
 <div class="product-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="8"/></svg></div>
-<div class="product-info"><h3>VitaRevive Rise</h3><p class="product-cat">Vitality &amp; Sleep</p><a href="#" class="btn btn-outline">Learn More</a></div>
+<div class="product-info"><h3>VitaRevive Rise</h3><p class="product-cat">Peptide Compound</p><p class="product-ruo">For Research Use Only</p><a href="#" class="btn btn-outline">View Details</a></div>
 </div>
 <div class="product-card fade-in">
 <div class="product-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="8"/></svg></div>
-<div class="product-info"><h3>VitaRevive Glow</h3><p class="product-cat">Skin &amp; Hair Renewal</p><a href="#" class="btn btn-outline">Learn More</a></div>
+<div class="product-info"><h3>VitaRevive Glow</h3><p class="product-cat">Research Peptide Blend</p><p class="product-ruo">For Research Use Only</p><a href="#" class="btn btn-outline">View Details</a></div>
 </div>
 <div class="product-card fade-in">
 <div class="product-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="8"/></svg></div>
-<div class="product-info"><h3>VitaRevive Balance</h3><p class="product-cat">Hormonal Optimization</p><a href="#" class="btn btn-outline">Learn More</a></div>
+<div class="product-info"><h3>VitaRevive Balance</h3><p class="product-cat">Peptide Compound</p><p class="product-ruo">For Research Use Only</p><a href="#" class="btn btn-outline">View Details</a></div>
 </div>
 </div>
 </div>
@@ -233,51 +218,24 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 <section class="how" id="how">
 <div class="container">
 <div class="how-header fade-in">
-<p class="section-label">The Process</p>
-<h2>How It Works</h2>
+<p class="section-label">Our Process</p>
+<h2>Batch Produced. Batch Tested.</h2>
 </div>
 <div class="steps fade-in">
 <div class="step">
 <div class="step-num">1</div>
-<h3>Discover</h3>
-<p>Explore our curated collection and find the formulation that speaks to your unique wellness goals.</p>
+<h3>Precision Synthesis</h3>
+<p>Manufactured in U.S. laboratories using advanced solid-phase peptide synthesis under strict GMP-aligned protocols.</p>
 </div>
 <div class="step">
 <div class="step-num">2</div>
-<h3>Choose</h3>
-<p>Select the peptide protocol tailored to your body's needs — whether it's energy, recovery, or radiance.</p>
+<h3>Verified Purity</h3>
+<p>Every batch is third-party tested via HPLC and mass spectrometry. Certificates of Analysis confirm 98%+ purity.</p>
 </div>
 <div class="step">
 <div class="step-num">3</div>
-<h3>Thrive</h3>
-<p>Experience the transformation as science-backed peptides help you feel like the best version of yourself.</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials" id="testimonials">
-<div class="container">
-<div class="testimonials-header fade-in">
-<p class="section-label">Real Stories</p>
-<h2>What Our Community Says</h2>
-</div>
-<div class="testimonials-grid">
-<div class="testimonial-card fade-in">
-<div class="quote">&ldquo;</div>
-<p>I finally feel like myself again. After months of feeling depleted, VitaRevive gave me back my energy and my confidence. I wake up excited for the day ahead.</p>
-<div class="author">Sarah M., 42<span>Marketing Executive</span></div>
-</div>
-<div class="testimonial-card fade-in">
-<div class="quote">&ldquo;</div>
-<p>As a busy mom of three, I'd forgotten what it felt like to prioritize myself. VitaRevive changed that. My skin is glowing and I have energy I haven't felt in years.</p>
-<div class="author">Jennifer L., 38<span>Entrepreneur &amp; Mother</span></div>
-</div>
-<div class="testimonial-card fade-in">
-<div class="quote">&ldquo;</div>
-<p>I was skeptical at first, but the science behind these formulations is real. Three months in and I feel stronger, sleep better, and genuinely look forward to each morning.</p>
-<div class="author">Diana R., 55<span>Yoga Instructor</span></div>
+<h3>Fast Fulfillment</h3>
+<p>Products are lyophilized, sealed, and dispatched from our U.S. facility with same-day processing on qualifying orders.</p>
 </div>
 </div>
 </div>
@@ -292,32 +250,32 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 </div>
 <div class="faq-list fade-in">
 <div class="faq-item">
-<button class="faq-q">What are peptides and how do they work?<span class="icon">+</span></button>
-<div class="faq-a"><p>Peptides are short chains of amino acids that act as signaling molecules in your body. They communicate with your cells to support natural processes like recovery, metabolism, and cellular renewal — working with your biology, not against it.</p></div>
+<button class="faq-q">What are peptides?<span class="icon">+</span></button>
+<div class="faq-a"><p>Peptides are short chains of amino acids linked by peptide bonds. They serve as important tools in biochemical and pharmacological research, enabling scientists to study receptor binding, cell signaling pathways, and structure-activity relationships.</p></div>
 </div>
 <div class="faq-item">
-<button class="faq-q">Are VitaRevive products safe?<span class="icon">+</span></button>
-<div class="faq-a"><p>Our formulations are developed using rigorous scientific research and manufactured in certified facilities. We prioritize purity, potency, and transparency in everything we create. Always consult your healthcare provider before beginning any new wellness protocol.</p></div>
+<button class="faq-q">What does "For Research Use Only" mean?<span class="icon">+</span></button>
+<div class="faq-a"><p>All VitaRevive products are sold strictly for in-vitro research and laboratory use. They are not intended for human or animal consumption, nor for use in diagnostic or therapeutic procedures. Purchasers assume responsibility for compliance with all applicable regulations.</p></div>
 </div>
 <div class="faq-item">
-<button class="faq-q">How long before I see results?<span class="icon">+</span></button>
-<div class="faq-a"><p>Most of our community members report noticeable changes within 4–8 weeks of consistent use. Every body is unique, so individual experiences may vary. The key is consistency and patience as your body responds to the peptide signaling.</p></div>
+<button class="faq-q">What purity standards do your peptides meet?<span class="icon">+</span></button>
+<div class="faq-a"><p>Each compound undergoes rigorous quality control. We provide Certificates of Analysis (COA) with every order, including HPLC purity data and mass spectrometry confirmation. Our standard purity threshold is 98% or higher.</p></div>
 </div>
 <div class="faq-item">
-<button class="faq-q">Which product is right for me?<span class="icon">+</span></button>
-<div class="faq-a"><p>It depends on your wellness goals. Whether you're focused on weight management, energy, skin health, or overall vitality, we have a formulation designed for you. Explore our collection or reach out to our team for personalized guidance.</p></div>
+<button class="faq-q">How should these products be stored?<span class="icon">+</span></button>
+<div class="faq-a"><p>Lyophilized peptides should be stored at -20 degrees Celsius in a dry environment, protected from light. Once reconstituted, peptides should be aliquoted and stored at -20 degrees Celsius to minimize freeze-thaw degradation. Detailed handling instructions are included with each shipment.</p></div>
 </div>
 <div class="faq-item">
-<button class="faq-q">Can I use multiple products together?<span class="icon">+</span></button>
-<div class="faq-a"><p>Yes — many of our formulations are designed to complement each other. Popular pairings include Sculpt + Ignite for metabolic support, or Glow + Rise for beauty and vitality. We recommend starting with one product and adding gradually.</p></div>
+<button class="faq-q">Do you provide Certificates of Analysis?<span class="icon">+</span></button>
+<div class="faq-a"><p>Yes. A Certificate of Analysis is included with every order. COAs detail the purity, molecular weight, sequence verification, and appearance of the compound. Additional analytical data is available upon request.</p></div>
 </div>
 <div class="faq-item">
 <button class="faq-q">Do you ship internationally?<span class="icon">+</span></button>
-<div class="faq-a"><p>We currently ship within the United States. International availability is coming soon. Join our newsletter to be the first to know when we expand to your region.</p></div>
+<div class="faq-a"><p>We currently ship within the United States. International shipping is under evaluation. Subscribe to our mailing list to receive updates on expanded availability.</p></div>
 </div>
 <div class="faq-item">
 <button class="faq-q">What is your return policy?<span class="icon">+</span></button>
-<div class="faq-a"><p>We stand behind our products with a 30-day satisfaction guarantee. If you're not experiencing the results you hoped for, contact our support team for a hassle-free return process.</p></div>
+<div class="faq-a"><p>Due to the nature of research materials, returns are accepted only for products that arrive damaged or fail to meet the specifications listed on the Certificate of Analysis. Contact our team within 14 days of receipt to initiate a claim.</p></div>
 </div>
 </div>
 </div>
@@ -326,10 +284,10 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 <!-- NEWSLETTER -->
 <section class="newsletter" id="newsletter">
 <div class="container fade-in">
-<p class="section-label">Stay Connected</p>
-<h2>Join the VitaRevive Community</h2>
-<p>Wellness tips, exclusive offers, and the latest in peptide science — delivered to your inbox.</p>
-<form class="newsletter-form" onsubmit="event.preventDefault();this.innerHTML='<p style=\'padding:16px;font-weight:500\'>Welcome to the community ✨</p>'">
+<p class="section-label">Stay Informed</p>
+<h2>Research Updates and Product Releases</h2>
+<p>New compound announcements, catalog updates, and published research references -- delivered to your inbox.</p>
+<form class="newsletter-form" onsubmit="event.preventDefault();this.innerHTML='<p style=\'padding:16px;font-weight:500\'>You have been subscribed.</p>'">
 <input type="email" placeholder="Your email address" required>
 <button type="submit">Subscribe</button>
 </form>
@@ -342,12 +300,12 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 <div class="footer-top">
 <div class="footer-brand">
 <div class="logo">Vita<span style="color:var(--terra)">Revive</span></div>
-<p>Science-backed peptide wellness for the modern woman. Feel like you again.</p>
+<p>Research-grade peptide compounds. Synthesized for science.</p>
 </div>
 <div class="footer-col">
 <h4>Company</h4>
 <a href="#">About Us</a>
-<a href="#">Our Science</a>
+<a href="#">Quality &amp; Testing</a>
 <a href="#">Contact</a>
 <a href="#">Careers</a>
 </div>
@@ -356,21 +314,19 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 <a href="#">Privacy Policy</a>
 <a href="#">Terms of Service</a>
 <a href="#">Shipping Policy</a>
-<a href="#">Refund Policy</a>
+<a href="#">Return Policy</a>
 </div>
 <div class="footer-col">
 <h4>Connect</h4>
 <div class="social-icons">
-<a href="#" aria-label="Instagram">IG</a>
-<a href="#" aria-label="Facebook">FB</a>
-<a href="#" aria-label="TikTok">TT</a>
-<a href="#" aria-label="Pinterest">PN</a>
+<a href="#" aria-label="LinkedIn">LI</a>
+<a href="#" aria-label="Twitter">TW</a>
 </div>
 </div>
 </div>
 <div class="footer-bottom">
-<p class="disclaimer">These products are intended for research purposes only. These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease. Consult your healthcare provider before starting any new supplement or wellness protocol.</p>
-<p>&copy; 2026 VitaRevive. All rights reserved. For research purposes only.</p>
+<div class="footer-disclaimer">FOR RESEARCH USE ONLY. The statements made on this website have not been evaluated by the U.S. Food and Drug Administration. The products offered are not intended to diagnose, treat, cure, or prevent any disease. VitaRevive is not a compounding pharmacy or chemical compounding facility as defined under Section 503A of the Federal Food, Drug, and Cosmetic Act. All products are sold strictly for in-vitro research and laboratory purposes only and are not for human or animal consumption. They are not drugs, supplements, food products, or cosmetics, and may not be misbranded, misused, or mislabeled as such. The purchaser agrees that these products will not be used for any purpose other than bona fide research. By placing an order, the buyer assumes all liability for the use and handling of these materials.</div>
+<p>&copy; 2026 VitaRevive. All rights reserved. For Research Use Only.</p>
 </div>
 </div>
 </footer>
