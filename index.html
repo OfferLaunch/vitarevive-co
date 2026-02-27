@@ -14,10 +14,11 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:500;line-height:1.2
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
-/* RUO BANNER */
-.ruo-banner{background:var(--forest);color:var(--cream);text-align:center;padding:12px 24px;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;position:fixed;top:0;left:0;right:0;z-index:110}
+/* TOP BAR */
+.top-bar{background:var(--forest);color:var(--cream);padding:10px 24px;display:flex;justify-content:center;gap:40px;font-size:.75rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;position:fixed;top:0;left:0;right:0;z-index:110;flex-wrap:wrap}
+.top-bar span{opacity:.8}
 /* NAV */
-nav{position:fixed;top:40px;left:0;right:0;z-index:100;background:rgba(250,246,240,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(168,181,160,.15);transition:box-shadow .3s}
+nav{position:fixed;top:36px;left:0;right:0;z-index:100;background:rgba(250,246,240,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(168,181,160,.15);transition:box-shadow .3s}
 nav.scrolled{box-shadow:0 2px 20px rgba(45,59,45,.08)}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:600;letter-spacing:.02em;color:var(--forest)}
@@ -27,29 +28,32 @@ nav.scrolled{box-shadow:0 2px 20px rgba(45,59,45,.08)}
 .nav-links a:hover{color:var(--terra)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{display:block;width:24px;height:2px;background:var(--forest);transition:all .3s}
-.mobile-menu{display:none;position:fixed;inset:0;top:112px;background:var(--cream);flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:99}
+.mobile-menu{display:none;position:fixed;inset:0;top:108px;background:var(--cream);flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:99}
 .mobile-menu.open{display:flex}
 .mobile-menu a{font-family:'Playfair Display',serif;font-size:1.5rem}
 /* HERO */
 .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:160px 24px 80px;background:var(--cream);position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-20%;right:-10%;width:500px;height:500px;border-radius:50%;background:var(--euca);opacity:.3;filter:blur(100px)}
 .hero::after{content:'';position:absolute;bottom:-10%;left:-5%;width:400px;height:400px;border-radius:50%;background:var(--blush);opacity:.25;filter:blur(80px)}
-.hero-content{position:relative;z-index:1;max-width:720px}
+.hero-content{position:relative;z-index:1;max-width:760px}
 .hero h1{font-size:clamp(2.5rem,6vw,4.5rem);color:var(--forest);margin-bottom:24px;font-weight:400;font-style:italic}
-.hero p{font-size:clamp(1rem,2vw,1.2rem);color:var(--forest);opacity:.75;max-width:520px;margin:0 auto 40px;font-weight:300}
-.hero .ruo-tag{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);border:1.5px solid var(--terra);padding:8px 20px;margin-bottom:24px}
+.hero p.hero-sub{font-size:clamp(1rem,2vw,1.25rem);color:var(--forest);opacity:.75;max-width:540px;margin:0 auto 48px;font-weight:300}
 .btn{display:inline-block;padding:16px 40px;font-family:'DM Sans',sans-serif;font-size:.875rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:none;cursor:pointer;transition:all .35s ease}
 .btn-primary{background:var(--forest);color:var(--cream);border-radius:0}
 .btn-primary:hover{background:var(--terra)}
 .btn-outline{background:transparent;color:var(--forest);border:1.5px solid var(--forest);border-radius:0}
 .btn-outline:hover{background:var(--forest);color:var(--cream)}
-/* ABOUT */
-.about{padding:120px 24px;background:var(--white)}
-.about-inner{max-width:800px;margin:0 auto;text-align:center}
-.section-label{font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--sage);margin-bottom:16px}
-.about h2{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:32px;color:var(--forest)}
-.about p{font-size:1.05rem;color:var(--forest);opacity:.7;max-width:620px;margin:0 auto;font-weight:300}
-.about .divider{width:60px;height:1.5px;background:var(--gold);margin:32px auto 0}
+/* RUO BLOCK */
+.ruo-block{padding:80px 24px;background:var(--white);border-top:1px solid var(--euca);border-bottom:1px solid var(--euca)}
+.ruo-inner{max-width:800px;margin:0 auto;text-align:center}
+.ruo-inner h2{font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--forest);margin-bottom:24px}
+.ruo-inner p{font-size:.95rem;color:var(--forest);opacity:.65;font-weight:300;line-height:1.9;max-width:680px;margin:0 auto}
+/* TRUST BAR */
+.trust-bar{padding:60px 24px;background:var(--cream)}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:900px;margin:0 auto;text-align:center}
+.trust-item h3{font-size:1.1rem;margin-bottom:8px;font-weight:500}
+.trust-item p{font-size:.9rem;opacity:.6;font-weight:300}
+.trust-item .trust-icon{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold)}
 /* PRODUCTS */
 .products{padding:120px 24px;background:var(--cream)}
 .products-header{text-align:center;margin-bottom:64px}
@@ -62,9 +66,28 @@ nav.scrolled{box-shadow:0 2px 20px rgba(45,59,45,.08)}
 .product-img svg{position:relative;z-index:1;width:48px;height:48px;opacity:.3}
 .product-info{padding:28px 24px}
 .product-info h3{font-size:1.15rem;margin-bottom:6px;font-weight:500}
-.product-info .product-cat{font-size:.8rem;color:var(--sage);font-weight:500;letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px}
-.product-info .product-ruo{font-size:.7rem;color:var(--terra);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:20px}
+.product-info .product-cat{font-size:.75rem;color:var(--sage);font-weight:500;letter-spacing:.04em;text-transform:uppercase;margin-bottom:16px}
+.product-info .product-ruo{font-size:.65rem;color:var(--terra);font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px;padding:6px 0;border-top:1px solid var(--euca)}
 .product-info .btn-outline{padding:12px 28px;font-size:.75rem;width:100%;text-align:center}
+/* COA SECTION */
+.coa{padding:100px 24px;background:var(--white)}
+.coa-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.coa-text .section-label{font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--sage);margin-bottom:16px}
+.coa-text h2{font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--forest);margin-bottom:20px}
+.coa-text p{font-size:.95rem;color:var(--forest);opacity:.65;font-weight:300;line-height:1.9}
+.coa-visual{background:var(--euca);aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center}
+.coa-visual .coa-purity{font-family:'Playfair Display',serif;font-size:3.5rem;color:var(--forest);font-weight:600;line-height:1}
+.coa-visual .coa-label{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);margin-top:8px;font-weight:500}
+.coa-visual .coa-methods{font-size:.8rem;color:var(--forest);opacity:.5;margin-top:24px;font-weight:300;line-height:1.8}
+.section-label{font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--sage);margin-bottom:16px}
+/* HOW IT WORKS */
+.how{padding:120px 24px;background:var(--cream)}
+.how-header{text-align:center;margin-bottom:72px}
+.how-header h2{font-size:clamp(1.8rem,4vw,2.8rem);color:var(--forest)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;max-width:960px;margin:0 auto;text-align:center}
+.step-num{width:64px;height:64px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold);margin:0 auto 24px}
+.step h3{font-size:1.25rem;margin-bottom:12px}
+.step p{font-size:.95rem;opacity:.65;font-weight:300;max-width:280px;margin:0 auto}
 /* FAQ */
 .faq{padding:120px 24px;background:var(--white)}
 .faq-header{text-align:center;margin-bottom:64px}
@@ -99,9 +122,10 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 .social-icons{display:flex;gap:16px;margin-top:8px}
 .social-icons a{width:36px;height:36px;border:1px solid rgba(250,246,240,.2);display:flex;align-items:center;justify-content:center;font-size:.8rem;transition:all .3s}
 .social-icons a:hover{border-color:var(--gold);color:var(--gold)}
-.footer-bottom{border-top:1px solid rgba(250,246,240,.1);padding-top:24px;text-align:center}
-.footer-bottom p{font-size:.75rem;opacity:.4;font-weight:300;line-height:1.8}
-.footer-disclaimer{max-width:800px;margin:0 auto 16px;padding:20px 24px;border:1px solid rgba(250,246,240,.15);font-size:.8rem!important;opacity:.7!important;font-weight:400;line-height:1.9;text-align:center}
+.footer-bottom{border-top:1px solid rgba(250,246,240,.1);padding-top:24px}
+.footer-tagline{text-align:center;font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:8px;opacity:.8}
+.footer-copy{text-align:center;font-size:.75rem;opacity:.4;font-weight:300;margin-bottom:20px}
+.footer-disclaimer{max-width:800px;margin:0 auto;padding:20px 24px;border:1px solid rgba(250,246,240,.15);background:rgba(250,246,240,.04);font-size:.78rem;opacity:.65;font-weight:300;line-height:2;text-align:center}
 /* ANIMATIONS */
 .fade-in{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
@@ -109,14 +133,18 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 @media(max-width:1024px){
 .products-grid{grid-template-columns:repeat(2,1fr)}
 .footer-top{grid-template-columns:1fr 1fr}
+.coa-inner{grid-template-columns:1fr}
 }
 @media(max-width:768px){
 .nav-links{display:none}
 .hamburger{display:flex}
 .products-grid{grid-template-columns:1fr 1fr;gap:20px}
+.steps{grid-template-columns:1fr;gap:40px}
+.trust-grid{grid-template-columns:1fr;gap:24px}
 .footer-top{grid-template-columns:1fr}
 .newsletter-form{flex-direction:column}
 .newsletter-form input{border-right:1.5px solid var(--sage);border-bottom:none}
+.top-bar{gap:16px;font-size:.65rem;padding:8px 16px}
 }
 @media(max-width:480px){
 .products-grid{grid-template-columns:1fr}
@@ -125,8 +153,13 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 </head>
 <body>
 
-<!-- RUO BANNER -->
-<div class="ruo-banner">For Research Use Only — Not for Human Consumption</div>
+<!-- TOP BAR -->
+<div class="top-bar">
+<span>Research Use Only</span>
+<span>Batch Produced, Batch Tested</span>
+<span>Manufactured in the USA</span>
+<span>Fast and Discreet Shipping</span>
+</div>
 
 <!-- NAV -->
 <nav id="navbar">
@@ -135,8 +168,9 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 <div class="nav-links">
 <a href="#about">About</a>
 <a href="#products">Catalog</a>
+<a href="#coa">Documentation</a>
+<a href="#how">Process</a>
 <a href="#faq">FAQ</a>
-<a href="#newsletter">Updates</a>
 </div>
 <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
 <span></span><span></span><span></span>
@@ -146,27 +180,47 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 <div class="mobile-menu">
 <a href="#about" onclick="this.parentElement.classList.remove('open')">About</a>
 <a href="#products" onclick="this.parentElement.classList.remove('open')">Catalog</a>
+<a href="#coa" onclick="this.parentElement.classList.remove('open')">Documentation</a>
+<a href="#how" onclick="this.parentElement.classList.remove('open')">Process</a>
 <a href="#faq" onclick="this.parentElement.classList.remove('open')">FAQ</a>
-<a href="#newsletter" onclick="this.parentElement.classList.remove('open')">Updates</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
 <div class="hero-content">
-<div class="ruo-tag">For Research Use Only</div>
-<h1>Precision peptides for modern research.</h1>
-<p>High-purity, rigorously tested peptide compounds manufactured to exacting standards. Trusted by researchers and laboratories worldwide.</p>
+<h1>Direct from the lab.</h1>
+<p class="hero-sub">Batch produced, batch tested research peptide compounds. Manufactured in the USA to exacting purity standards.</p>
 <a href="#products" class="btn btn-primary">View Full Catalog</a>
 </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about" id="about">
-<div class="about-inner fade-in">
-<p class="section-label">Our Standard</p>
-<h2>Purity. Precision. Consistency.</h2>
-<p>VitaRevive is dedicated to providing the research community with peptide compounds of the highest purity and quality. Every batch is synthesized under strict protocols and verified through third-party analytical testing, including HPLC and mass spectrometry, to ensure consistent identity, potency, and composition.</p>
-<div class="divider"></div>
+<!-- RUO BLOCK -->
+<section class="ruo-block" id="about">
+<div class="ruo-inner fade-in">
+<p class="section-label">Research Use Only</p>
+<h2>Not for Human or Animal Consumption</h2>
+<p>All products from VitaRevive are intended solely for laboratory research purposes and are not for human or animal consumption. These materials are for in-vitro research only and must be handled by qualified professionals in controlled laboratory environments. By purchasing, the buyer agrees to use these products in compliance with all applicable laws and regulations.</p>
+</div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust-bar">
+<div class="trust-grid fade-in">
+<div class="trust-item">
+<div class="trust-icon">US</div>
+<h3>Made in the USA</h3>
+<p>No outsourcing, ever. Synthesized in a U.S.-based ISO 5 / Class 100 cleanroom equipped with HPLC systems, IR spectrometers, and precision freeze dryers.</p>
+</div>
+<div class="trust-item">
+<div class="trust-icon">QC</div>
+<h3>Batch Produced, Batch Tested</h3>
+<p>Every batch undergoes independent third-party testing. COAs available for each lot.</p>
+</div>
+<div class="trust-item">
+<div class="trust-icon">RX</div>
+<h3>Research Grade</h3>
+<p>Synthesized for the research community. Verified purity, consistent composition, reliable results.</p>
+</div>
 </div>
 </section>
 
@@ -175,41 +229,97 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 <div class="container">
 <div class="products-header fade-in">
 <p class="section-label">Product Catalog</p>
-<h2>Research Peptide Compounds</h2>
+<h2>Explore Our Compounds</h2>
 </div>
 <div class="products-grid">
 <div class="product-card fade-in">
 <div class="product-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="8"/></svg></div>
-<div class="product-info"><h3>VitaRevive Sculpt</h3><p class="product-cat">Peptide Compound</p><p class="product-ruo">For Research Use Only</p><a href="#" class="btn btn-outline">View Details</a></div>
+<div class="product-info">
+<h3>VitaRevive Sculpt</h3>
+<p class="product-cat">Research Peptide Compound</p>
+<p class="product-ruo">For Research Use Only</p>
+<a href="#" class="btn btn-outline">View Details</a>
+</div>
 </div>
 <div class="product-card fade-in">
 <div class="product-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="8"/></svg></div>
-<div class="product-info"><h3>VitaRevive Sculpt Pro</h3><p class="product-cat">Advanced Peptide Compound</p><p class="product-ruo">For Research Use Only</p><a href="#" class="btn btn-outline">View Details</a></div>
+<div class="product-info">
+<h3>VitaRevive Sculpt Pro</h3>
+<p class="product-cat">Advanced Peptide Compound</p>
+<p class="product-ruo">For Research Use Only</p>
+<a href="#" class="btn btn-outline">View Details</a>
+</div>
 </div>
 <div class="product-card fade-in">
 <div class="product-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="8"/></svg></div>
-<div class="product-info"><h3>VitaRevive Ignite</h3><p class="product-cat">Research Peptide Blend</p><p class="product-ruo">For Research Use Only</p><a href="#" class="btn btn-outline">View Details</a></div>
+<div class="product-info">
+<h3>VitaRevive Ignite</h3>
+<p class="product-cat">Research Peptide Blend</p>
+<p class="product-ruo">For Research Use Only</p>
+<a href="#" class="btn btn-outline">View Details</a>
+</div>
 </div>
 <div class="product-card fade-in">
 <div class="product-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="8"/></svg></div>
-<div class="product-info"><h3>VitaRevive Restore</h3><p class="product-cat">Peptide Compound</p><p class="product-ruo">For Research Use Only</p><a href="#" class="btn btn-outline">View Details</a></div>
+<div class="product-info">
+<h3>VitaRevive Restore</h3>
+<p class="product-cat">Recovery Compound</p>
+<p class="product-ruo">For Research Use Only</p>
+<a href="#" class="btn btn-outline">View Details</a>
+</div>
 </div>
 <div class="product-card fade-in">
 <div class="product-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="8"/></svg></div>
-<div class="product-info"><h3>VitaRevive Recharge</h3><p class="product-cat">Research Peptide Blend</p><p class="product-ruo">For Research Use Only</p><a href="#" class="btn btn-outline">View Details</a></div>
+<div class="product-info">
+<h3>VitaRevive Recharge</h3>
+<p class="product-cat">Research Peptide Blend</p>
+<p class="product-ruo">For Research Use Only</p>
+<a href="#" class="btn btn-outline">View Details</a>
+</div>
 </div>
 <div class="product-card fade-in">
 <div class="product-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="8"/></svg></div>
-<div class="product-info"><h3>VitaRevive Rise</h3><p class="product-cat">Peptide Compound</p><p class="product-ruo">For Research Use Only</p><a href="#" class="btn btn-outline">View Details</a></div>
+<div class="product-info">
+<h3>VitaRevive Rise</h3>
+<p class="product-cat">Growth Compound</p>
+<p class="product-ruo">For Research Use Only</p>
+<a href="#" class="btn btn-outline">View Details</a>
+</div>
 </div>
 <div class="product-card fade-in">
 <div class="product-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="8"/></svg></div>
-<div class="product-info"><h3>VitaRevive Glow</h3><p class="product-cat">Research Peptide Blend</p><p class="product-ruo">For Research Use Only</p><a href="#" class="btn btn-outline">View Details</a></div>
+<div class="product-info">
+<h3>VitaRevive Glow</h3>
+<p class="product-cat">Research Peptide Compound</p>
+<p class="product-ruo">For Research Use Only</p>
+<a href="#" class="btn btn-outline">View Details</a>
+</div>
 </div>
 <div class="product-card fade-in">
 <div class="product-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="8"/></svg></div>
-<div class="product-info"><h3>VitaRevive Balance</h3><p class="product-cat">Peptide Compound</p><p class="product-ruo">For Research Use Only</p><a href="#" class="btn btn-outline">View Details</a></div>
+<div class="product-info">
+<h3>VitaRevive Balance</h3>
+<p class="product-cat">Recovery Compound</p>
+<p class="product-ruo">For Research Use Only</p>
+<a href="#" class="btn btn-outline">View Details</a>
 </div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- COA DOCUMENTATION -->
+<section class="coa" id="coa">
+<div class="coa-inner fade-in">
+<div class="coa-text">
+<p class="section-label">Quality Assurance</p>
+<h2>COA Documentation</h2>
+<p>Manufactured in U.S. laboratories through advanced solid-phase peptide synthesis, each batch is verified by HPLC, mass spectrometry, and backed by Certificates of Analysis. No guessing games. Every compound ships with full documentation confirming identity, purity, and composition.</p>
+</div>
+<div class="coa-visual">
+<div class="coa-purity">99%+</div>
+<div class="coa-label">Verified Purity</div>
+<div class="coa-methods">HPLC Analysis<br>Mass Spectrometry<br>Certificate of Analysis Included</div>
 </div>
 </div>
 </section>
@@ -219,23 +329,23 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 <div class="container">
 <div class="how-header fade-in">
 <p class="section-label">Our Process</p>
-<h2>Batch Produced. Batch Tested.</h2>
+<h2>How It Works</h2>
 </div>
 <div class="steps fade-in">
 <div class="step">
 <div class="step-num">1</div>
-<h3>Precision Synthesis</h3>
-<p>Manufactured in U.S. laboratories using advanced solid-phase peptide synthesis under strict GMP-aligned protocols.</p>
+<h3>Precision Lyophilization</h3>
+<p>Synthesized via advanced solid-phase peptide synthesis and lyophilized in a U.S.-based ISO 5 / Class 100 cleanroom under strict GMP-aligned manufacturing standards.</p>
 </div>
 <div class="step">
 <div class="step-num">2</div>
 <h3>Verified Purity</h3>
-<p>Every batch is third-party tested via HPLC and mass spectrometry. Certificates of Analysis confirm 98%+ purity.</p>
+<p>Every batch is third-party tested with HPLC and mass spectrometry to confirm chemical identity and integrity.</p>
 </div>
 <div class="step">
 <div class="step-num">3</div>
-<h3>Fast Fulfillment</h3>
-<p>Products are lyophilized, sealed, and dispatched from our U.S. facility with same-day processing on qualifying orders.</p>
+<h3>Same-Day Fulfillment</h3>
+<p>Orders are dispatched same-day from our U.S. facility with fast, discreet shipping nationwide.</p>
 </div>
 </div>
 </div>
@@ -251,31 +361,27 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 <div class="faq-list fade-in">
 <div class="faq-item">
 <button class="faq-q">What are peptides?<span class="icon">+</span></button>
-<div class="faq-a"><p>Peptides are short chains of amino acids linked by peptide bonds. They serve as important tools in biochemical and pharmacological research, enabling scientists to study receptor binding, cell signaling pathways, and structure-activity relationships.</p></div>
+<div class="faq-a"><p>Peptides are short chains of amino acids linked by peptide bonds. They are widely used in biochemical and pharmacological research to study receptor binding, cell signaling pathways, and structure-activity relationships in controlled laboratory settings.</p></div>
 </div>
 <div class="faq-item">
-<button class="faq-q">What does "For Research Use Only" mean?<span class="icon">+</span></button>
-<div class="faq-a"><p>All VitaRevive products are sold strictly for in-vitro research and laboratory use. They are not intended for human or animal consumption, nor for use in diagnostic or therapeutic procedures. Purchasers assume responsibility for compliance with all applicable regulations.</p></div>
+<button class="faq-q">Do these products come with documentation?<span class="icon">+</span></button>
+<div class="faq-a"><p>Yes. Every order ships with a Certificate of Analysis (COA) detailing purity, molecular weight, sequence verification, and batch information. HPLC and mass spectrometry data are included as standard. Additional analytical documentation is available upon request.</p></div>
 </div>
 <div class="faq-item">
-<button class="faq-q">What purity standards do your peptides meet?<span class="icon">+</span></button>
-<div class="faq-a"><p>Each compound undergoes rigorous quality control. We provide Certificates of Analysis (COA) with every order, including HPLC purity data and mass spectrometry confirmation. Our standard purity threshold is 98% or higher.</p></div>
+<button class="faq-q">What purity standards do your compounds meet?<span class="icon">+</span></button>
+<div class="faq-a"><p>All VitaRevive compounds are manufactured to a minimum purity threshold of 99% or higher, verified through independent third-party testing. Purity data is documented on every Certificate of Analysis.</p></div>
 </div>
 <div class="faq-item">
-<button class="faq-q">How should these products be stored?<span class="icon">+</span></button>
-<div class="faq-a"><p>Lyophilized peptides should be stored at -20 degrees Celsius in a dry environment, protected from light. Once reconstituted, peptides should be aliquoted and stored at -20 degrees Celsius to minimize freeze-thaw degradation. Detailed handling instructions are included with each shipment.</p></div>
+<button class="faq-q">How should these compounds be stored?<span class="icon">+</span></button>
+<div class="faq-a"><p>Lyophilized peptides should be stored at -20 degrees Celsius in a dry environment, protected from light. Once reconstituted, compounds should be aliquoted and stored at -20 degrees Celsius to minimize freeze-thaw degradation. Detailed handling instructions are included with each shipment.</p></div>
 </div>
 <div class="faq-item">
-<button class="faq-q">Do you provide Certificates of Analysis?<span class="icon">+</span></button>
-<div class="faq-a"><p>Yes. A Certificate of Analysis is included with every order. COAs detail the purity, molecular weight, sequence verification, and appearance of the compound. Additional analytical data is available upon request.</p></div>
+<button class="faq-q">How long do orders take to deliver?<span class="icon">+</span></button>
+<div class="faq-a"><p>Orders placed before 2:00 PM EST ship same day. Standard delivery within the continental United States is 2-4 business days. Expedited shipping options are available at checkout.</p></div>
 </div>
 <div class="faq-item">
 <button class="faq-q">Do you ship internationally?<span class="icon">+</span></button>
-<div class="faq-a"><p>We currently ship within the United States. International shipping is under evaluation. Subscribe to our mailing list to receive updates on expanded availability.</p></div>
-</div>
-<div class="faq-item">
-<button class="faq-q">What is your return policy?<span class="icon">+</span></button>
-<div class="faq-a"><p>Due to the nature of research materials, returns are accepted only for products that arrive damaged or fail to meet the specifications listed on the Certificate of Analysis. Contact our team within 14 days of receipt to initiate a claim.</p></div>
+<div class="faq-a"><p>We currently ship within the United States only. International availability is under evaluation. Subscribe to our mailing list to receive updates on expanded shipping regions.</p></div>
 </div>
 </div>
 </div>
@@ -285,8 +391,8 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 <section class="newsletter" id="newsletter">
 <div class="container fade-in">
 <p class="section-label">Stay Informed</p>
-<h2>Research Updates and Product Releases</h2>
-<p>New compound announcements, catalog updates, and published research references -- delivered to your inbox.</p>
+<h2>Product Releases and Catalog Updates</h2>
+<p>New compound announcements, restocks, and documentation updates delivered to your inbox.</p>
 <form class="newsletter-form" onsubmit="event.preventDefault();this.innerHTML='<p style=\'padding:16px;font-weight:500\'>You have been subscribed.</p>'">
 <input type="email" placeholder="Your email address" required>
 <button type="submit">Subscribe</button>
@@ -300,21 +406,19 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 <div class="footer-top">
 <div class="footer-brand">
 <div class="logo">Vita<span style="color:var(--terra)">Revive</span></div>
-<p>Research-grade peptide compounds. Synthesized for science.</p>
+<p>Research-grade peptide compounds. Batch produced, batch tested in the USA.</p>
 </div>
 <div class="footer-col">
 <h4>Company</h4>
-<a href="#">About Us</a>
+<a href="#">About</a>
 <a href="#">Quality &amp; Testing</a>
 <a href="#">Contact</a>
-<a href="#">Careers</a>
 </div>
 <div class="footer-col">
 <h4>Legal</h4>
 <a href="#">Privacy Policy</a>
 <a href="#">Terms of Service</a>
 <a href="#">Shipping Policy</a>
-<a href="#">Return Policy</a>
 </div>
 <div class="footer-col">
 <h4>Connect</h4>
@@ -325,8 +429,9 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 </div>
 </div>
 <div class="footer-bottom">
-<div class="footer-disclaimer">FOR RESEARCH USE ONLY. The statements made on this website have not been evaluated by the U.S. Food and Drug Administration. The products offered are not intended to diagnose, treat, cure, or prevent any disease. VitaRevive is not a compounding pharmacy or chemical compounding facility as defined under Section 503A of the Federal Food, Drug, and Cosmetic Act. All products are sold strictly for in-vitro research and laboratory purposes only and are not for human or animal consumption. They are not drugs, supplements, food products, or cosmetics, and may not be misbranded, misused, or mislabeled as such. The purchaser agrees that these products will not be used for any purpose other than bona fide research. By placing an order, the buyer assumes all liability for the use and handling of these materials.</div>
-<p>&copy; 2026 VitaRevive. All rights reserved. For Research Use Only.</p>
+<p class="footer-tagline">Verified compounds. Ready to ship.</p>
+<p class="footer-copy">&copy; 2026 VitaRevive. All rights reserved.</p>
+<div class="footer-disclaimer">The statements made on this website have not been evaluated by the U.S. Food and Drug Administration. The products offered are not intended to diagnose, treat, cure, or prevent any disease. VitaRevive is not a compounding pharmacy or chemical compounding facility as defined under Section 503A of the Federal Food, Drug, and Cosmetic Act. All products are sold strictly for research purposes only and are not for human or animal consumption.</div>
 </div>
 </div>
 </footer>
