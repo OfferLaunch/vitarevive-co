@@ -126,6 +126,30 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 .footer-tagline{text-align:center;font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:8px;opacity:.8}
 .footer-copy{text-align:center;font-size:.75rem;opacity:.4;font-weight:300;margin-bottom:20px}
 .footer-disclaimer{max-width:800px;margin:0 auto 12px;padding:0;font-size:.7rem;opacity:.4;font-weight:300;line-height:1.8;text-align:center}
+/* RESEARCH LIBRARY */
+.research-library{padding:120px 24px;background:var(--white);border-top:1px solid var(--euca)}
+.research-header{text-align:center;margin-bottom:64px}
+.research-header h2{font-size:clamp(1.8rem,4vw,2.8rem);color:var(--forest)}
+.research-intro{font-size:.9rem;color:var(--forest);opacity:.6;font-weight:300;line-height:1.9;max-width:700px;margin:16px auto 0}
+.research-grid{display:flex;flex-direction:column;gap:0;max-width:900px;margin:0 auto}
+.research-card{border-bottom:1px solid var(--euca)}
+.research-card:first-child{border-top:1px solid var(--euca)}
+.research-card-header{display:flex;justify-content:space-between;align-items:center;padding:28px 0;cursor:pointer;gap:16px}
+.research-card-header h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:500;color:var(--forest);margin-bottom:4px}
+.research-compound{font-size:.75rem;color:var(--sage);font-weight:500;letter-spacing:.03em;text-transform:uppercase}
+.research-toggle{font-size:1.4rem;color:var(--gold);flex-shrink:0;transition:transform .3s;font-weight:300}
+.research-card.open .research-toggle{transform:rotate(45deg)}
+.research-card-body{max-height:0;overflow:hidden;transition:max-height .5s ease,padding .3s ease}
+.research-card.open .research-card-body{max-height:800px;padding-bottom:32px}
+.research-summary{font-size:.9rem;color:var(--forest);opacity:.7;font-weight:300;line-height:1.9;margin-bottom:24px}
+.research-card-body h4{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);margin-bottom:12px}
+.research-card-body ul{list-style:none;padding:0;margin:0 0 28px}
+.research-card-body ul li{font-size:.85rem;color:var(--forest);opacity:.65;font-weight:300;line-height:1.8;padding:4px 0 4px 20px;position:relative}
+.research-card-body ul li::before{content:'';position:absolute;left:0;top:12px;width:6px;height:6px;border:1px solid var(--gold);border-radius:50%}
+.research-citations{border-top:1px solid var(--euca);padding-top:20px}
+.research-citations p{font-size:.8rem;color:var(--forest);opacity:.55;font-weight:300;line-height:1.8;margin-bottom:8px}
+.research-citations a{color:var(--terra);text-decoration:underline;text-underline-offset:2px}
+.research-citations a:hover{opacity:.7}
 /* ANIMATIONS */
 .fade-in{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
@@ -169,6 +193,7 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 <a href="#products">Catalog</a>
 <a href="#coa">Documentation</a>
 <a href="#how">Process</a>
+<a href="#research">Research</a>
 <a href="#faq">FAQ</a>
 </div>
 <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
@@ -181,6 +206,7 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 <a href="#products" onclick="this.parentElement.classList.remove('open')">Catalog</a>
 <a href="#coa" onclick="this.parentElement.classList.remove('open')">Documentation</a>
 <a href="#how" onclick="this.parentElement.classList.remove('open')">Process</a>
+<a href="#research" onclick="this.parentElement.classList.remove('open')">Research</a>
 <a href="#faq" onclick="this.parentElement.classList.remove('open')">FAQ</a>
 </div>
 
@@ -286,6 +312,225 @@ footer{padding:64px 24px 32px;background:var(--forest);color:var(--cream)}
 <a href="#" class="btn btn-outline">View Details</a>
 </div>
 </div>
+</div>
+</div>
+</section>
+
+<!-- RESEARCH LIBRARY -->
+<section class="research-library" id="research">
+<div class="container">
+<div class="research-header fade-in">
+<p class="section-label">Compound Research</p>
+<h2>Research Library</h2>
+<p class="research-intro">A curated overview of preclinical research associated with the compounds in our catalog. All summaries reference published, peer-reviewed literature. These compounds are sold strictly for research use and are not intended for human consumption.</p>
+</div>
+
+<div class="research-grid fade-in">
+
+<!-- Sculpt — Semaglutide -->
+<div class="research-card">
+<div class="research-card-header" onclick="this.parentElement.classList.toggle('open')">
+<div>
+<h3>Sculpt</h3>
+<span class="research-compound">GLP-1 Receptor Agonist (Semaglutide Analog)</span>
+</div>
+<span class="research-toggle">+</span>
+</div>
+<div class="research-card-body">
+<p class="research-summary">Semaglutide is a glucagon-like peptide-1 (GLP-1) receptor agonist that has been extensively studied in preclinical models of metabolic regulation. Research in experimental settings has demonstrated its role in modulating glucose homeostasis, insulin secretion, and appetite signaling pathways. Preclinical investigations suggest activity in central nervous system appetite circuits and peripheral metabolic tissues.</p>
+<h4>Key Research Areas</h4>
+<ul>
+<li>GLP-1 receptor-mediated glucose homeostasis and insulin secretagogue activity in pancreatic beta-cell models</li>
+<li>Hypothalamic appetite signaling and energy intake regulation observed in rodent studies</li>
+<li>Gastric motility modulation and nutrient absorption kinetics in preclinical gastrointestinal models</li>
+<li>Cardiovascular biomarker modulation studied in experimental metabolic syndrome paradigms</li>
+</ul>
+<div class="research-citations">
+<h4>References</h4>
+<p>Knudsen LB, Lau J. The discovery and development of liraglutide and semaglutide. <em>Frontiers in Endocrinology</em>. 2019;10:155. <a href="https://doi.org/10.3389/fendo.2019.00155" target="_blank" rel="noopener">doi:10.3389/fendo.2019.00155</a></p>
+<p>Gabery S, et al. Semaglutide lowers body weight in rodents via distributed neural pathways. <em>JCI Insight</em>. 2020;5(6):e133429. <a href="https://doi.org/10.1172/jci.insight.133429" target="_blank" rel="noopener">doi:10.1172/jci.insight.133429</a></p>
+</div>
+</div>
+</div>
+
+<!-- Sculpt Pro — Retatrutide -->
+<div class="research-card">
+<div class="research-card-header" onclick="this.parentElement.classList.toggle('open')">
+<div>
+<h3>Sculpt Pro</h3>
+<span class="research-compound">GLP-1/GIP/Glucagon Triple Agonist (Retatrutide)</span>
+</div>
+<span class="research-toggle">+</span>
+</div>
+<div class="research-card-body">
+<p class="research-summary">Retatrutide is a triple-hormone receptor agonist targeting GLP-1, GIP, and glucagon receptors simultaneously. Preclinical research has examined its capacity to engage multiple metabolic pathways concurrently, including energy expenditure, lipid oxidation, and hepatic glucose output. Studies in experimental models suggest enhanced metabolic activity relative to single- or dual-agonist compounds.</p>
+<h4>Key Research Areas</h4>
+<ul>
+<li>Simultaneous GLP-1, GIP, and glucagon receptor engagement and downstream signaling cascades</li>
+<li>Hepatic lipid metabolism and triglyceride clearance studied in preclinical obesity models</li>
+<li>Energy expenditure modulation via glucagon receptor-mediated thermogenic pathways</li>
+<li>Incretin-axis potentiation and glycemic control in experimental metabolic paradigms</li>
+</ul>
+<div class="research-citations">
+<h4>References</h4>
+<p>Coskun T, et al. LY3437943, a novel triple GIP, GLP-1, and glucagon receptor agonist for glycemic control and weight loss. <em>Cell Metabolism</em>. 2022;34(8):1234-1247.e9. <a href="https://doi.org/10.1016/j.cmet.2022.07.013" target="_blank" rel="noopener">doi:10.1016/j.cmet.2022.07.013</a></p>
+</div>
+</div>
+</div>
+
+<!-- Ignite — Tesamorelin -->
+<div class="research-card">
+<div class="research-card-header" onclick="this.parentElement.classList.toggle('open')">
+<div>
+<h3>Ignite</h3>
+<span class="research-compound">Growth Hormone-Releasing Hormone Analog (Tesamorelin)</span>
+</div>
+<span class="research-toggle">+</span>
+</div>
+<div class="research-card-body">
+<p class="research-summary">Tesamorelin is a synthetic analog of growth hormone-releasing hormone (GHRH) that has been studied in preclinical models for its effects on pituitary somatotroph stimulation and downstream growth hormone (GH) secretion. Research in laboratory settings has examined its influence on body composition parameters, visceral adiposity, and IGF-1 axis regulation. Experimental models have also explored its role in lipodystrophy-associated metabolic disturbances.</p>
+<h4>Key Research Areas</h4>
+<ul>
+<li>Pituitary GH secretagogue activity and pulsatile growth hormone release patterns in experimental models</li>
+<li>Visceral adipose tissue reduction and lipolytic pathway activation observed in preclinical studies</li>
+<li>IGF-1 axis modulation and downstream anabolic signaling in tissue culture systems</li>
+</ul>
+<div class="research-citations">
+<h4>References</h4>
+<p>Stanley TL, et al. Effect of tesamorelin on visceral fat and liver fat in HIV-infected patients with abdominal fat accumulation. <em>JAMA</em>. 2014;312(4):380-389. <a href="https://doi.org/10.1001/jama.2014.8334" target="_blank" rel="noopener">doi:10.1001/jama.2014.8334</a></p>
+<p>Falutz J, et al. Metabolic effects of a growth hormone-releasing factor in patients with HIV. <em>New England Journal of Medicine</em>. 2007;357(23):2359-2370. <a href="https://doi.org/10.1056/NEJMoa072375" target="_blank" rel="noopener">doi:10.1056/NEJMoa072375</a></p>
+</div>
+</div>
+</div>
+
+<!-- Restore — BPC-157 + TB-500 -->
+<div class="research-card">
+<div class="research-card-header" onclick="this.parentElement.classList.toggle('open')">
+<div>
+<h3>Restore</h3>
+<span class="research-compound">BPC-157 + Thymosin Beta-4 (TB-500) Blend</span>
+</div>
+<span class="research-toggle">+</span>
+</div>
+<div class="research-card-body">
+<p class="research-summary">BPC-157 (Body Protection Compound-157) and Thymosin Beta-4 have been independently studied in preclinical models of tissue repair, angiogenesis, and wound healing. BPC-157 research highlights activity in collagen regulation, extracellular matrix remodeling, and cytoprotective mechanisms. TB-500 has been investigated for its role in actin sequestration, cellular migration, and anti-inflammatory signaling in experimental wound models.</p>
+<h4>Key Research Areas</h4>
+<ul>
+<li>Collagen synthesis regulation and extracellular matrix remodeling in connective tissue models</li>
+<li>Angiogenic pathway activation including VEGF and nitric oxide signaling observed in laboratory settings</li>
+<li>Actin-mediated cellular migration and wound closure kinetics studied in in vitro assays</li>
+<li>Cytoprotective and anti-inflammatory mechanisms in preclinical gastrointestinal and musculoskeletal models</li>
+</ul>
+<div class="research-citations">
+<h4>References</h4>
+<p>Sikiric P, et al. Brain-gut axis and pentadecapeptide BPC 157: theoretical and practical implications. <em>Current Neuropharmacology</em>. 2016;14(8):857-865. <a href="https://doi.org/10.2174/1570159X13666160502153022" target="_blank" rel="noopener">doi:10.2174/1570159X13666160502153022</a></p>
+<p>Sosne G, et al. Thymosin beta 4: a potential novel therapy for neurotrophic keratopathy, dry eye, and ocular surface diseases. <em>Vitamins and Hormones</em>. 2016;102:277-306. <a href="https://doi.org/10.1016/bs.vh.2016.04.012" target="_blank" rel="noopener">doi:10.1016/bs.vh.2016.04.012</a></p>
+</div>
+</div>
+</div>
+
+<!-- Recharge — NAD+ -->
+<div class="research-card">
+<div class="research-card-header" onclick="this.parentElement.classList.toggle('open')">
+<div>
+<h3>Recharge</h3>
+<span class="research-compound">Nicotinamide Adenine Dinucleotide (NAD+)</span>
+</div>
+<span class="research-toggle">+</span>
+</div>
+<div class="research-card-body">
+<p class="research-summary">NAD+ is a critical coenzyme involved in cellular redox reactions, mitochondrial electron transport, and sirtuin-dependent signaling pathways. Preclinical research has extensively characterized the role of NAD+ in cellular energy metabolism, DNA repair mechanisms, and oxidative stress responses. Studies in experimental models suggest that NAD+ bioavailability influences mitochondrial function, epigenetic regulation, and cellular senescence pathways.</p>
+<h4>Key Research Areas</h4>
+<ul>
+<li>Mitochondrial electron transport chain function and oxidative phosphorylation efficiency in cellular models</li>
+<li>Sirtuin (SIRT1-7) activation and downstream effects on chromatin remodeling and gene expression</li>
+<li>PARP-mediated DNA damage repair and genomic stability studied in preclinical aging models</li>
+<li>Oxidative stress attenuation and reactive oxygen species scavenging in neuronal and hepatic cell lines</li>
+</ul>
+<div class="research-citations">
+<h4>References</h4>
+<p>Yoshino J, Baur JA, Imai S. NAD+ intermediates: the biology and therapeutic potential of NMN and NR. <em>Cell Metabolism</em>. 2018;27(3):513-528. <a href="https://doi.org/10.1016/j.cmet.2017.11.002" target="_blank" rel="noopener">doi:10.1016/j.cmet.2017.11.002</a></p>
+<p>Verdin E. NAD+ in aging, metabolism, and neurodegeneration. <em>Science</em>. 2015;350(6265):1208-1213. <a href="https://doi.org/10.1126/science.aac4854" target="_blank" rel="noopener">doi:10.1126/science.aac4854</a></p>
+</div>
+</div>
+</div>
+
+<!-- Rise — CJC-1295 + Ipamorelin -->
+<div class="research-card">
+<div class="research-card-header" onclick="this.parentElement.classList.toggle('open')">
+<div>
+<h3>Rise</h3>
+<span class="research-compound">CJC-1295 + Ipamorelin Blend</span>
+</div>
+<span class="research-toggle">+</span>
+</div>
+<div class="research-card-body">
+<p class="research-summary">CJC-1295 is a modified growth hormone-releasing hormone (GHRH) analog with extended half-life, while Ipamorelin is a selective growth hormone secretagogue receptor (GHS-R) agonist. Preclinical research has examined their combined effects on pulsatile growth hormone release and IGF-1 elevation. Studies in experimental models suggest synergistic amplification of GH secretion through complementary receptor pathways without significant perturbation of other pituitary hormones.</p>
+<h4>Key Research Areas</h4>
+<ul>
+<li>Synergistic pulsatile GH release via concurrent GHRH and ghrelin receptor pathway activation</li>
+<li>IGF-1 axis modulation and downstream anabolic signaling in preclinical tissue models</li>
+<li>Selectivity of GH secretion with minimal impact on cortisol, prolactin, and ACTH in experimental paradigms</li>
+</ul>
+<div class="research-citations">
+<h4>References</h4>
+<p>Teichman SL, et al. Prolonged stimulation of growth hormone (GH) and insulin-like growth factor I secretion by CJC-1295, a long-acting analog of GH-releasing hormone. <em>Journal of Clinical Endocrinology and Metabolism</em>. 2006;91(3):799-805. <a href="https://doi.org/10.1210/jc.2005-1536" target="_blank" rel="noopener">doi:10.1210/jc.2005-1536</a></p>
+<p>Raun K, et al. Ipamorelin, the first selective growth hormone secretagogue. <em>European Journal of Endocrinology</em>. 1998;139(5):552-561. <a href="https://doi.org/10.1530/eje.0.1390552" target="_blank" rel="noopener">doi:10.1530/eje.0.1390552</a></p>
+</div>
+</div>
+</div>
+
+<!-- Glow — GHK-Cu + Epithalon -->
+<div class="research-card">
+<div class="research-card-header" onclick="this.parentElement.classList.toggle('open')">
+<div>
+<h3>Glow</h3>
+<span class="research-compound">GHK-Cu + Epithalon Blend</span>
+</div>
+<span class="research-toggle">+</span>
+</div>
+<div class="research-card-body">
+<p class="research-summary">GHK-Cu (glycyl-L-histidyl-L-lysine copper complex) is a naturally occurring copper peptide studied in preclinical models for its effects on extracellular matrix proteins, collagen synthesis, and metalloproteinase regulation. Epithalon (epitalon) is a synthetic tetrapeptide analog of epithalamin that has been investigated in experimental models of telomere biology and telomerase activation. Together, these compounds represent distinct but complementary research targets in cellular aging and matrix biology.</p>
+<h4>Key Research Areas</h4>
+<ul>
+<li>Copper peptide-mediated collagen and glycosaminoglycan synthesis in dermal fibroblast models</li>
+<li>Telomerase activation and telomere elongation studied in cell culture and rodent aging models</li>
+<li>Extracellular matrix remodeling and metalloproteinase regulation observed in wound healing assays</li>
+<li>Antioxidant gene expression modulation via Nrf2 pathway activation in preclinical oxidative stress models</li>
+</ul>
+<div class="research-citations">
+<h4>References</h4>
+<p>Pickart L, Vasquez-Soltero JM, Margolina A. GHK peptide as a natural modulator of multiple cellular pathways in skin regeneration. <em>BioMed Research International</em>. 2015;2015:648108. <a href="https://doi.org/10.1155/2015/648108" target="_blank" rel="noopener">doi:10.1155/2015/648108</a></p>
+<p>Khavinson VK, et al. Peptide epitalon activates chromatin at the old age. <em>Neuroendocrinology Letters</em>. 2003;24(5):329-333. PMID: 14647007.</p>
+</div>
+</div>
+</div>
+
+<!-- Balance — PT-141 -->
+<div class="research-card">
+<div class="research-card-header" onclick="this.parentElement.classList.toggle('open')">
+<div>
+<h3>Balance</h3>
+<span class="research-compound">Melanocortin Receptor Agonist (PT-141 / Bremelanotide)</span>
+</div>
+<span class="research-toggle">+</span>
+</div>
+<div class="research-card-body">
+<p class="research-summary">PT-141 (bremelanotide) is a synthetic cyclic heptapeptide melanocortin receptor agonist that has been studied in preclinical models for its activity at MC3R and MC4R receptor subtypes. Research in experimental settings has characterized its role in central melanocortin signaling pathways, which are implicated in a range of neuroendocrine and behavioral responses. Preclinical investigations suggest activity in hypothalamic circuits involved in autonomic and neuroendocrine regulation.</p>
+<h4>Key Research Areas</h4>
+<ul>
+<li>MC3R and MC4R receptor binding affinity and selectivity profiling in receptor expression systems</li>
+<li>Central melanocortin pathway activation and downstream neuroendocrine signaling in rodent models</li>
+<li>Hypothalamic-pituitary axis modulation studied in preclinical neuroendocrine paradigms</li>
+</ul>
+<div class="research-citations">
+<h4>References</h4>
+<p>Molinoff PB, et al. PT-141: a melanocortin agonist for the treatment of sexual dysfunction. <em>Annals of the New York Academy of Sciences</em>. 2003;994:96-102. <a href="https://doi.org/10.1111/j.1749-6632.2003.tb03167.x" target="_blank" rel="noopener">doi:10.1111/j.1749-6632.2003.tb03167.x</a></p>
+<p>Pfaus JG, et al. A role for melanocortins in the central regulation of female sexual function. <em>European Journal of Pharmacology</em>. 2004;505(1-3):11-20. <a href="https://doi.org/10.1016/j.ejphar.2004.10.026" target="_blank" rel="noopener">doi:10.1016/j.ejphar.2004.10.026</a></p>
+</div>
+</div>
+</div>
+
 </div>
 </div>
 </section>
